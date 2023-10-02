@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="buren-theme">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mijn Zaken demo — NL Design System</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@nl-design-system-unstable/buren-design-tokens/dist/index.css"
+    />
+
+    <link rel="stylesheet" href="style/index.css" />
+    <script
+      async
+      src="https://unpkg.com/@utrecht/web-component-library-stencil/dist/utrecht/utrecht.esm.js"
+      type="module"
+    ></script>
+  </head>
+  <body>
+    <utrecht-surface>
+      <utrecht-document>
+        <utrecht-skip-link href="#main">Naar de inhoud</utrecht-skip-link>
+        <utrecht-page>
+          <utrecht-page-header>
+            <img
+              src="https://www.buren.nl/wp-content/uploads/2020/04/cropped-buren_logo.png"
+              alt="logo gemeente Buren"
+              width="92"
+              height="80"
+            />
+          </utrecht-page-header>
+          <utrecht-page-content>
+            <utrecht-heading-1>Mijn Zaken demo</utrecht-heading-1>
+            <section>
+              <utrecht-heading-2>Progress list</utrecht-heading-2>
+              <utrecht-progress-list>
+                <utrecht-progress-list-item
+                  >Getuigen wijzigen of meer getuigen
+                  uitnodigen</utrecht-progress-list-item
+                >
+                <utrecht-progress-list-item
+                  >Getuigen zijn definitief en bevestigingen van getuigen
+                  ontvangen</utrecht-progress-list-item
+                >
+                <utrecht-progress-list-item
+                  >Eventuele extra's bestellen</utrecht-progress-list-item
+                >
+                <utrecht-progress-list-item>Trouwen</utrecht-progress-list-item>
+              </utrecht-progress-list>
+            </section>
+            <section>
+              <utrecht-heading-2
+                >Progress list with nested list</utrecht-heading-2
+              >
+              <utrecht-progress-list>
+                <utrecht-progress-list-item
+                  checked
+                  from="checkd"
+                  to="not-checked"
+                  >Getuigen wijzigen of meer getuigen uitnodigen
+                  <div slot="body">
+                    <utrecht-paragraph
+                      ><utrecht-link href="#"
+                        >Getuigen wijzigen of meer getuigen
+                        uitnodigen</utrecht-link
+                      ></utrecht-paragraph
+                    >
+                    <utrecht-paragraph
+                      >Tussen vandaag en 24 februari 2023</utrecht-paragraph
+                    >
+                  </div></utrecht-progress-list-item
+                >
+                <utrecht-progress-list-item>
+                  Getuigen zijn definitief en bevestigingen van getuigen
+                  ontvangen
+                  <div slot="body">
+                    <p>Regel het vóór 24 februari 2023</p>
+                  </div>
+                </utrecht-progress-list-item>
+                <utrecht-progress-list-item open>
+                  Trouwen
+                  <div slot="body">
+                    <utrecht-paragraph
+                      >Jullie gaan trouwen in het
+                      <utrecht-link href="#"
+                        >Stadhuis Spui</utrecht-link
+                      ></utrecht-paragraph
+                    >
+                    <utrecht-paragraph>Op 1 april 2023</utrecht-paragraph>
+                  </div>
+                  <utrecht-progress-list slot="details">
+                    <utrecht-progress-sublist-item
+                      >Stap 1</utrecht-progress-sublist-item
+                    >
+                    <utrecht-progress-sublist-item
+                      >Stap 2</utrecht-progress-sublist-item
+                    >
+                    <utrecht-progress-sublist-item
+                      >Stap 3</utrecht-progress-sublist-item
+                    >
+                  </utrecht-progress-list>
+                </utrecht-progress-list-item>
+              </utrecht-progress-list>
+            </section>
+            <section>
+              <utrecht-heading-2
+                >Progress list with expandable details</utrecht-heading-2
+              >
+              <utrecht-progress-list>
+                <utrecht-progress-list-item
+                  checked
+                  from="checkd"
+                  to="not-checked"
+                  >Getuigen wijzigen of meer getuigen uitnodigen
+                  <div slot="body">
+                    <utrecht-paragraph
+                      ><utrecht-link href="#"
+                        >Getuigen wijzigen of meer getuigen
+                        uitnodigen</utrecht-link
+                      ></utrecht-paragraph
+                    >
+                    <utrecht-paragraph
+                      >Tussen vandaag en 24 februari 2023</utrecht-paragraph
+                    >
+                  </div></utrecht-progress-list-item
+                >
+                <utrecht-progress-list-item>
+                  Getuigen zijn definitief en bevestigingen van getuigen
+                  ontvangen
+                  <div slot="body">
+                    <p>Regel het vóór 24 februari 2023</p>
+                  </div>
+                </utrecht-progress-list-item>
+                <utrecht-progress-list-item open details>
+                  Trouwen
+                  <div slot="body">
+                    <utrecht-paragraph
+                      >Jullie gaan trouwen in het
+                      <utrecht-link href="#"
+                        >Stadhuis Spui</utrecht-link
+                      ></utrecht-paragraph
+                    >
+                    <utrecht-paragraph>Op 1 april 2023</utrecht-paragraph>
+                  </div>
+                  <utrecht-progress-list slot="details">
+                    <utrecht-progress-sublist-item
+                      >Stap 1</utrecht-progress-sublist-item
+                    >
+                    <utrecht-progress-sublist-item
+                      >Stap 2</utrecht-progress-sublist-item
+                    >
+                    <utrecht-progress-sublist-item
+                      >Stap 3</utrecht-progress-sublist-item
+                    >
+                  </utrecht-progress-list>
+                </utrecht-progress-list-item>
+              </utrecht-progress-list>
+            </section>
+          </utrecht-page-content>
+          <utrecht-page-footer>Footer</utrecht-page-footer>
+        </utrecht-page>
+      </utrecht-document>
+    </utrecht-surface>
+  </body>
+</html>
